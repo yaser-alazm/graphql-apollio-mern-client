@@ -70,7 +70,7 @@ function Login(props) {
                     />
                 </Form>
 
-                {Object.keys(errors).length > 0 && (
+                {/* {Object.keys(errors).length > 0 && (
                     <div className="ui message error">
                         <ul className="list">
                             {Object.values(errors).map(error => (
@@ -79,7 +79,7 @@ function Login(props) {
                             )}
                         </ul>
                     </div>
-                )}
+                )} */}
             </Grid.Column>
         </Grid>
     )
