@@ -11,7 +11,7 @@ function PostForm() {
         body: ''
     })
 
-    const [createPost, {error}] = useMutation(CREATE_POST, {
+    const [createPost] = useMutation(CREATE_POST, {
         variables: values,
         update(proxy, result){
 

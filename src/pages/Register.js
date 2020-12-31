@@ -12,7 +12,7 @@ function Register(props) {
     const context = useContext(AuthContext)
 
     // TODO: setup errors
-    const [errors, setErrors] = useState({})
+    // const [errors, setErrors] = useState({})
 
     const {values, onChange,onSubmit} = useForm(addUserCallback, {
         username: '',
