@@ -99,7 +99,7 @@ function SinglePost(props) {
                                     <Button
                                         type="submit"
                                         onClick={createComment}
-                                        color="teal"
+                                        color="pink"
                                         icon="play"
                                         content="Submit"
                                         disabled={comment.trim() === ''}
