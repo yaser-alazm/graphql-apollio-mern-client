@@ -46,9 +46,10 @@ function PostForm() {
                         value={values.body}
                     />
                     <Button
-                        content="Post"
+                        content="Add"
                         type="submit"
                         onClick={onSubmit}
+                        disabled= {values.body.trim() === ''}
                     />
                 </Form.Field>
             </Form>
