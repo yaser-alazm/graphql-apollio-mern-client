@@ -73,8 +73,8 @@ function SinglePost(props) {
                                 as="div"
                                 size='mini'
                                 icon='comment'
-                                color='blue'
-                                label={{ color:'blue', basic: true, content: commentsCount }}
+                                color='green'
+                                label={{ color:'green', basic: true, content: commentsCount }}
                                 labelPosition='right'
                                 onClick={() => console.log('Comment Post ..')}
                             />

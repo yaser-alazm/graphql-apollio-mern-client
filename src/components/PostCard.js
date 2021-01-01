@@ -37,8 +37,8 @@ function PostCard({post:{id,username,createdAt,body,likesCount,commentsCount, li
                     to={`/post/${id}`}
                     size='mini'
                     icon='comment'
-                    color='blue'
-                    label={{ color:'blue', basic: true, content: commentsCount }}
+                    color='green'
+                    label={{ color:'green', basic: true, content: commentsCount }}
                     labelPosition='right'
                 />
                 {user && user.username === username && <DeleteButton postId={id}/>}
