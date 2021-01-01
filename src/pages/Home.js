@@ -13,6 +13,7 @@ function Home() {
     const {user} = useContext(AuthContext)
     const {loading, data: { getPosts: posts } = {} } = useQuery(FETCH_POSTS)
     // const content = ''
+    // console.log(posts)
     const postsContent = loading ? (<Loader active />) : (
         <Grid columns={3}>
             <Grid.Row>
@@ -21,7 +22,7 @@ function Home() {
             <Grid.Row>
                 {user && (
 
-                    <PostForm/>
+                    <PostForm user={user}/>
                 )}
                 <Transition.Group>
                     {posts && posts.map(post => (

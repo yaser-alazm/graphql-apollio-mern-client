@@ -3,7 +3,7 @@ import gql from 'graphql-tag'
 export const FETCH_POSTS = gql`
     query{
         getPosts{
-            id body createdAt username likesCount
+            id body createdAt username likesCount userAvatar
             likes {
                 username
             }
@@ -26,7 +26,7 @@ export const LOGIN_USER = gql`
             username: $username
             password: $password
         ){
-            id username email createdAt token
+            id username email createdAt token avatar
         }
     }
 `
@@ -46,7 +46,7 @@ export const REGISTER_USER = gql`
                 confirmPassword: $confirmPassword
             }
         ){
-            id username email createdAt token
+            id username email createdAt token avatar
         }
     }
 `
@@ -54,7 +54,7 @@ export const REGISTER_USER = gql`
 export const CREATE_POST = gql`
     mutation createPost($body: String!){
         createPost(body: $body){
-            id body createdAt username likesCount commentsCount
+            id body createdAt username likesCount commentsCount userAvatar
             likes {
                 id username createdAt
             }
@@ -81,7 +81,7 @@ export const LIKE_POST = gql`
 export const FETCH_POST = gql`
     query getPost($postID: ID!){
         getPost(postID: $postID) {
-            id username body createdAt likesCount commentsCount
+            id username body createdAt likesCount commentsCount userAvatar
             likes{
                 id
                 username

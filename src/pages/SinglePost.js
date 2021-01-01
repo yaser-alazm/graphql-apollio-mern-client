@@ -29,7 +29,10 @@ function SinglePost(props) {
         }
     })
 
-    const {id,username, body, createdAt, likes, likesCount, comments, commentsCount} = post
+    const {id,username, body, createdAt, likes, likesCount, comments, commentsCount, userAvatar} = post
+
+    const resizedAvatar = userAvatar ? userAvatar.split('.jpg')[0] + '?s=200' : 'https://react.semantic-ui.com/images/avatar/large/matthew.png'
+    // console.log(resizedAvatar)
 
     const [createComment] = useMutation(CREATE_COMMENT, {
         update() {
@@ -53,7 +56,7 @@ function SinglePost(props) {
             </Grid.Row>
             <Grid.Row>
                 <Grid.Column width="4" >
-                    <Image size='small' src='https://react.semantic-ui.com/images/avatar/large/matthew.png' />
+                    <Image size='small' src={resizedAvatar} />
                 </Grid.Column>
 
                 <Grid.Column width="12" >
@@ -73,8 +76,8 @@ function SinglePost(props) {
                                 as="div"
                                 size='mini'
                                 icon='comment'
-                                color='green'
-                                label={{ color:'green', basic: true, content: commentsCount }}
+                                color='purple'
+                                label={{ color:'purple', basic: true, content: commentsCount }}
                                 labelPosition='right'
                                 onClick={() => console.log('Comment Post ..')}
                             />
@@ -99,7 +102,7 @@ function SinglePost(props) {
                                     <Button
                                         type="submit"
                                         onClick={createComment}
-                                        color="pink"
+                                        color="violet"
                                         icon="play"
                                         content="Submit"
                                         disabled={comment.trim() === ''}

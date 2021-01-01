@@ -26,7 +26,7 @@ function Register(props) {
         update(_,{data: {register: userData}} = {}) {
             context.login(userData)
             props.history.push('/')
-            console.log(userData)
+            // console.log(userData)
         },
         onError(err) {
             // setErrors(err.graphQLErrors[0].extensions.exception.errors)

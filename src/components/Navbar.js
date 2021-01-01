@@ -1,7 +1,7 @@
 import React, { useContext ,useState } from 'react'
 import {AuthContext} from '../context/auth'
 
-import { Menu, Container } from 'semantic-ui-react'
+import { Menu, Container, Image } from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 
 function Navbar() {
@@ -17,6 +17,13 @@ function Navbar() {
     const menuContent = user ? (
         <Menu pointing secondary>
             <Container>
+                <Menu.Item className="navImage">
+                    <Image
+                        size='mini'
+                        src= {user.avatar ? user.avatar : 'https://react.semantic-ui.com/images/avatar/large/matthew.png'}
+                        circular
+                    />
+                </Menu.Item>
                 <Menu.Item
                     name= {user.username}
                     as="div"

@@ -9,9 +9,10 @@ import DeleteButton from './DeleteButton'
 import {AuthContext} from '../context/auth'
 
 
-function PostCard({post:{id,username,createdAt,body,likesCount,commentsCount, likes, comments}}) {
+function PostCard({post:{id,username,createdAt,body,likesCount,commentsCount, likes, comments, userAvatar}}) {
 
     const {user} = useContext(AuthContext)
+    // console.log(userAvatar)
 
     return (
         <div>
@@ -20,7 +21,7 @@ function PostCard({post:{id,username,createdAt,body,likesCount,commentsCount, li
                     <Image
                     floated='right'
                     size='mini'
-                    src='https://react.semantic-ui.com/images/avatar/large/matthew.png'
+                    src= {userAvatar ? userAvatar : 'https://react.semantic-ui.com/images/avatar/large/matthew.png'}
                     circular
                     />
                     <Card.Header>{username}</Card.Header>
@@ -37,8 +38,8 @@ function PostCard({post:{id,username,createdAt,body,likesCount,commentsCount, li
                     to={`/post/${id}`}
                     size='mini'
                     icon='comment'
-                    color='green'
-                    label={{ color:'green', basic: true, content: commentsCount }}
+                    color='purple'
+                    label={{ color:'purple', basic: true, content: commentsCount }}
                     labelPosition='right'
                 />
                 {user && user.username === username && <DeleteButton postId={id}/>}

@@ -24,7 +24,7 @@ function Login(props) {
         update(_,{data:{login: userData} = {}}) {
             context.login(userData)
             props.history.push('/')
-            console.log(userData)
+            // console.log(userData)
         },
         onError(err) {
             // setErrors(err.graphQLErrors[0].extensions.exception.errors)

@@ -6,7 +6,7 @@ import { ApolloProvider,createHttpLink, InMemoryCache } from '@apollo/react-hook
 import {setContext} from 'apollo-link-context'
 
 const httpLink = createHttpLink({
-  uri: 'https://graphql-apollo-mern-network.herokuapp.com/'
+  uri: 'http://localhost:5000'
 });
 
 const authLink = setContext(() => {
