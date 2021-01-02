@@ -33,7 +33,7 @@ function PostForm({user:{username}}) {
         createPost()
     }
 
-    console.log(username.split(' ')[0].trim())
+    // console.log(username.split(' ')[0].trim())
     return (
         <Grid.Column>
             <Form>
