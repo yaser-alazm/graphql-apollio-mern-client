@@ -40,7 +40,7 @@ function PostForm({user:{username}}) {
                 <h1>Create a post</h1>
                 <Form.Field>
                     <Form.TextArea
-                        placeholder= {`What are you thinking about ${username.split(' ')[0].trim()} ?`}
+                        placeholder= {username ? `What are you thinking about ${username.split(' ')[0].trim()} ?` : 'What are you thinking about?'}
                         name= "body"
                         type="text"
                         onChange={onChange}
