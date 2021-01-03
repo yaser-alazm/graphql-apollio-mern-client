@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import {useMutation} from '@apollo/react-hooks'
 import {Button, Confirm} from 'semantic-ui-react'
 
-import {DELETE_POST, DELETE_COMMENT, FETCH_POST,FETCH_POSTS} from '../utils/GraphqlQueries'
+import {DELETE_POST, DELETE_COMMENT, FETCH_POSTS} from '../utils/GraphqlQueries'
 
 function DeleteButton({postId, deletePostCB, commentId}) {
 
