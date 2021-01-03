@@ -89,6 +89,7 @@ export const FETCH_POST = gql`
             comments{
                 id
                 username
+                userAvatar
                 body
             }
         }
@@ -123,6 +124,7 @@ export const CREATE_COMMENT = gql`
             comments {
                 id
                 body
+                userAvatar
                 createdAt
             }
         }

@@ -117,7 +117,16 @@ function SinglePost(props) {
                                 {user && user.username === comment.username && (
                                     <DeleteButton postId={id} commentId={comment.id} />
                                 )}
-                                <Card.Header>{comment.username}</Card.Header>
+                                <Card.Header>
+                                    <Image
+                                        size='mini'
+                                        as="div"
+                                        style={{marginRight: 5}}
+                                        src= {comment.userAvatar ? comment.userAvatar : 'https://react.semantic-ui.com/images/avatar/large/matthew.png'}
+                                        circular
+                                    />
+                                    {comment.username}
+                                </Card.Header>
                                 <Card.Meta><Moment fromNow>{comment.createdAt}</Moment></Card.Meta>
                                 <Card.Description>{comment.body}</Card.Description>
                             </Card.Content>
