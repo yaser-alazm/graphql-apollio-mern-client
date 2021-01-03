@@ -25,7 +25,7 @@ function SinglePost(props) {
         },
         onCompleted() {
             setPost(data.getPost)
-            // console.log(data.getPost)
+            console.log(data.getPost)
         }
     })
 
